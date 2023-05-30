@@ -77,7 +77,7 @@ public class InvoicePersistence {
 }
 ```
 
-Another easier example is
+## Another easier example
 
 ```
 // Example violating SRP

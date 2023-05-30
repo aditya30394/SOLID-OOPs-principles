@@ -1,12 +1,10 @@
 # Open-Closed Principle
 
-The Open-Closed Principle requires that classes should be open for extension and closed to modification.
+The Open-Closed Principle (OCP) states that classes should be open for extension, allowing new functionality to be added, but closed for modification, meaning that the existing code should not be altered.
 
-Modification means changing the code of an existing class, and extension means adding new functionality.
+Modifying existing code carries the risk of introducing bugs or unintended side effects. Therefore, the OCP encourages us to avoid making changes to tested and reliable production code whenever possible.
 
-So what this principle wants to say is: We should be able to add new functionality without touching the existing code for the class. This is because whenever we modify the existing code, we are taking the risk of creating potential bugs. So we should avoid touching the tested and reliable (mostly) production code if possible.
-
-Suppose in the SRP example, our customer asks to add persistance to database. One way would be to modify the InvoicePersistence like following:
+Let's consider the example of the Bookstore Invoice program from the previous SRP explanation. Suppose our customer requests the addition of database persistence to the invoice functionality. One approach would be to modify the InvoicePersistence class as follows:
 
 ```
 public class InvoicePersistence {
@@ -26,7 +24,7 @@ public class InvoicePersistence {
 }
 ```
 
-However, doing this breaks OCP principle. We should refactor this:
+However, this violates the OCP because we are modifying the existing class to accommodate the new requirement. Instead, we should follow the principle by extending the functionality without modifying the existing code. Here's an alternative approach:
 
 ```
 interface InvoicePersistence {
@@ -72,7 +70,8 @@ public class PersistenceManager {
 
 We can now pass any class that implements the InvoicePersistence interface to this class with the help of polymorphism. This is the flexibility that interfaces provide.
 
-Another example:
+## Another example:
+
 ```
 // Example violating OCP
 class Shape {

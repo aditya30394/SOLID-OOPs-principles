@@ -1,8 +1,8 @@
 # The Single Responsibility Principle
 
-A class should have only one reason to change, meaning it should have a single responsibility.
+The Single Responsibility Principle (SRP) states that a class should have only one reason to change, indicating that it should be responsible for a single task or responsibility.
 
-We will look at the code for a simple bookstore invoice program as an example. Let's start by defining a book class to use in our invoice followed by the invoice classs.
+Let's consider a simple example of a bookstore invoice program. We will define two classes: the Book class, representing a book, and the Invoice class, representing an invoice.
 
 ```
 class Book {
@@ -47,9 +47,10 @@ public class Invoice {
 }
 ```
 
-The SRP is violated because the inly reason Invoice class should change is when the logic to calculate the total changes. But this will change even if we have change to print mogic or save to file logic.
+In the above code, the SRP is violated because the Invoice class has multiple reasons to change. It should only change when the logic to calculate the total changes, but currently, it will also change if the print logic or save to file logic is modified.
 
-To fix this, we should create separate classes so that they are responsible for only one thing. Here's the modified code
+To adhere to the SRP, we need to refactor the code and create separate classes, each responsible for a single task. Here's the modified code:
+
 
 ```
 public class InvoicePrinter {

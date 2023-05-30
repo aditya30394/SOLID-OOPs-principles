@@ -5,7 +5,7 @@ SOLID is an acronym that represents a set of five design principles in object-or
 Let's look at each principle one by one. Following the SOLID acronym, they are:
 
 1. [The **S**ingle Responsibility Principle (SRP)](./SRP.md)
-2. The **O**pen-Closed Principle (OCP)
+2. [The **O**pen-Closed Principle (OCP)](./OCP.md)
 3. The **L**iskov Substitution Principle (LSP)
 4. The **I**nterface Segregation Principle (ISP)
 5. The **D**ependency Inversion Principle (DIP)

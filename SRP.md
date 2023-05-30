@@ -75,3 +75,27 @@ public class InvoicePersistence {
     }
 }
 ```
+
+Another easier example is
+
+```
+// Example violating SRP
+class Customer {
+   void CalculateDiscount() { /* ... */ }
+   void SendEmail() { /* ... */ }
+   void SaveToDatabase() { /* ... */ }
+}
+
+// Refactored example following SRP
+class Customer {
+   void CalculateDiscount() { /* ... */ }
+}
+
+class EmailService {
+   void SendEmail() { /* ... */ }
+}
+
+class Database {
+   void SaveToDatabase() { /* ... */ }
+}
+```

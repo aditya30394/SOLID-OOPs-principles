@@ -10,4 +10,6 @@ We will now explore each principle individually, adhering to the SOLID acronym.
 4. [The **I**nterface Segregation Principle (ISP)](./ISP.md)
 5. [The **D**ependency Inversion Principle (DIP)](./DIP.md)
 
-Source: https://www.freecodecamp.org/news/solid-principles-explained-in-plain-english/
+Sources: 
+1. https://www.freecodecamp.org/news/solid-principles-explained-in-plain-english/
+2. https://www.youtube.com/playlist?list=PLLWMQd6PeGY3ob0Ga6vn1czFZfW6e-FLr
